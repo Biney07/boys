@@ -1,0 +1,468 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halisa Birthday</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300&display=swap" rel="stylesheet">
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+        }
+
+
+
+        body.no-scroll {
+            overflow: hidden;
+            position: fixed;
+            width: 100%;
+        }
+
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            transition: transform 0.5s;
+        }
+
+        .text {
+            font-size: 30px;
+            color: white;
+            text-shadow: rgb(36, 36, 36) 1px 0 10px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .sText {
+            font-family: 'Kalam', cursive;
+            font-size: 23px;
+            color: white;
+            text-shadow: rgb(206, 206, 206, 0.2) 1px 0 10px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .fullHeightDiv {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: 30px;
+            color: white;
+            text-shadow: rgb(36, 36, 36) 1px 0 10px;
+            font-weight: bold;
+            transition: opacity 0.5s;
+        }
+
+        .fullHeightDiv:not(.active) {
+            pointer-events: none;
+            /* Ensure inactive divs don't interfere with touch events */
+        }
+
+        .black {
+            background: linear-gradient(to bottom, RGB(0, 0, 0), RGB(0, 0, 0, 0.9));
+
+
+        }
+
+        .div1 {
+            background-image: url('BARDHI.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+
+
+        .div3 {
+            background-image: url('BOYS.JPG');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .div4 {
+            position: relative;
+            /* Add this */
+            background-image: url('denied.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            color: black;
+            text-shadow: rgb(248, 248, 248) 1px 0 10px;
+        }
+
+
+        .smalltext {
+            position: absolute;
+            font-size: 20px;
+            top: 20px;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(to bottom, var(--start-color), var(--end-color));
+        }
+
+        .buton {
+            background-color: rgb(121, 182, 223);
+            text-shadow: rgb(151, 151, 151) 1px 0 10px;
+            color: white;
+            padding: 20px 40px;
+            position: relative;
+            font-size: 20px;
+            margin-top: 100px;
+            bottom: 90px;
+            border-radius: 20px;
+
+        }
+
+        .buttonBlue {
+            background-color: rgb(121, 182, 223);
+            text-shadow: rgb(151, 151, 151) 1px 0 10px;
+            color: white;
+            margin: 20px;
+            padding: 20px 40px;
+
+            font-size: 20px;
+
+            border-radius: 20px;
+        }
+
+        #passwordModal {
+            visibility: hidden;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            pointer-events: none;
+        }
+
+
+        #passwordModal>div {
+            position: relative;
+            /* Set to relative so the close button can be absolutely positioned within */
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            width: 300px;
+            text-align: center;
+        }
+
+        #passwordInput {
+            width: 100%;
+            padding: 10px;
+            font-size: 20px;
+            margin: 10px 0;
+        }
+
+        #passwordCheck {
+            background-color: rgb(121, 182, 223);
+            text-shadow: rgb(151, 151, 151) 1px 0 10px;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-size: 20px;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 15px;
+            right: 5px;
+            font-size: 24px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            color: #888;
+        }
+
+        .close-btn:hover {
+            color: #555;
+        }
+
+        #slider {
+            width: 80%;
+            margin: 20px 0;
+        }
+
+        #slider::-webkit-slider-thumb {
+            appearance: none;
+            /* Override default look */
+            width: 25px;
+            /* Set a width */
+            height: 25px;
+            /* Set a height */
+            background: white;
+            /* Set a background color */
+            cursor: pointer;
+            /* Cursor on hover */
+        }
+
+        #slider::-moz-range-thumb {
+            width: 25px;
+            height: 25px;
+            background: white;
+            cursor: pointer;
+        }
+
+        #confirmButton {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: rgb(121, 182, 223);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .foto {
+            width: 100px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="main-wrapper">
+
+        <div class="container">
+            <div class="fullHeightDiv div1 active">
+                PAGE TO BULLY <br> BARDH FETROSHI
+                <div class="smalltext "> Scroll down to see more</div>
+            </div>
+
+            <div class="fullHeightDiv gradient-bg ">
+                Play this music to enhance the feeling
+                <audio id="audioPlayer" controls src="ss.mp3" style="margin-top: 20px;"></audio>
+
+            </div>
+            <div class="fullHeightDiv div3">
+                BULLIZUESIT
+            </div>
+
+            <div class="fullHeightDiv gradient-bg">
+                So enjoy scrolling!
+            </div>
+            <div class="fullHeightDiv gradient-bg">
+                <div class="text">PRESS THE BUTTON</div>
+                <button class="buton" onclick="showModal()">Click to continue</button>
+            </div>
+            <div class="fullHeightDiv gradient-bg successDiv" style="display: none;">
+                <div class="text">
+
+                    You've now entered <br>
+                    Part II.
+                </div>
+
+            </div>
+
+            <div class="fullHeightDiv gradient-bg successDiv" style="display: none;">
+                <div> How much do u love Bardhis' mother??
+                </div>
+                <input type="range" id="slider" min="0" max="10" step="1" value="5" style="appearance: none; width: 80%; height: 10px; background: #d3d3d3; outline: none; 
+                       opacity: 0.7; -webkit-transition: .2s; transition: opacity .2s;">
+
+
+                <div style="display: flex; flex-direction: row;"> <span id="sliderValue">5</span>/10</div>
+
+                <button id="confirmButton" onclick="handleNote()">I am sure</button>
+                <div id="rangeshow" style="display: none;">
+                    <div class="text">
+                        No matter how much everybody loves her!
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div id="passwordModal">
+            <div>
+                <button class="close-btn" onclick="closeModal()">&times;</button>
+
+                <h2>Password: nanabardhit</h2>
+                <input type="password" id="passwordInput">
+                <button id="passwordCheck" onclick="passwordCheck()">Submit</button>
+                <p id="errorMsg" style="color:red;"></p>
+            </div>
+        </div>
+    </div>
+    <script>
+        let scrollPos = 0;
+
+        const container = document.querySelector('.container');
+        const divs = document.querySelectorAll('.fullHeightDiv');
+
+        const gradientDivs = document.querySelectorAll('.fullHeightDiv.gradient-bg');
+        const passwordModal = document.getElementById('passwordModal');
+        const passwordInput = document.getElementById('passwordInput');
+        const passwordCheck = document.getElementById('passwordCheck');
+        const errorMsg = document.getElementById('errorMsg');
+        const correctPassword = "nanabardhit";
+
+
+
+
+        const slider = document.getElementById('slider');
+        const sliderValue = document.getElementById('sliderValue');
+        const confirmButton = document.getElementById('confirmButton');
+        let confirmedValue;
+
+        // Displaying the slider value next to the slider
+        slider.oninput = function () {
+            sliderValue.textContent = this.value;
+        }
+
+        function handleNote() {
+            confirmedValue = slider.value;
+            document.getElementById('rangeshow').style.display = 'flex'
+
+        };
+
+
+
+        function handleChoose() {
+
+            document.getElementById('showchoose').style.display = 'flex'
+
+        };
+
+        function closeModal() {
+            passwordModal.style.opacity = '0';
+            passwordModal.style.pointerEvents = 'none';
+            passwordModal.style.visibility = 'hidden';
+            document.body.classList.remove('no-scroll'); // Add this line
+        }
+
+        function showModal() {
+            passwordModal.style.opacity = '1';
+            passwordModal.style.pointerEvents = 'all';
+            passwordModal.style.visibility = 'visible';
+            document.body.classList.add('no-scroll'); // Add this line
+        }
+
+
+        passwordCheck.addEventListener('click', function () {
+            if (passwordInput.value === correctPassword) {
+                passwordModal.style.visibility = 'hidden';
+                errorMsg.textContent = '';
+
+                const successDivs = document.getElementsByClassName("successDiv");
+                for (let div of successDivs) {
+                    div.style.display = "flex";
+                }
+
+                // Move to show the two newly revealed divs
+                scrollPos += 1;
+                updatePosition();
+
+            } else {
+                errorMsg.textContent = 'Incorrect password. Try again.';
+                passwordInput.value = '';
+            }
+        });
+
+
+
+
+        const colorPairs = [
+            ['#003366', '#0066CC'],
+            ['#002244', '#0088AA'],
+            ['#001133', '#005577'],
+            ['#000080', '#4682B4'],
+            ['#003399', '#00BFFF'],
+            ['#000055', '#0000AA'],
+            ['#00163A', '#003366'],
+            ['#8B0000', '#FF4500'],
+            ['#B22222', '#FF6347'],
+            ['#DC143C', '#FF7F50'],
+            ['#FF8C00', '#FFA500'],
+            ['#FF4500', '#FFD700'],
+            ['#FF6347', '#FFA07A'],
+            ['#FF6347', '#FFA07A'],
+            ['#FF4500', '#FFD700'],
+            ['#003399', '#00BFFF'],
+            ['#000055', '#0000AA'],
+            ['#00163A', '#003366'],
+            ['#8B0000', '#FF4500'],
+            ['#B22222', '#FF6347'],
+        ];
+
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+        }
+
+        shuffleArray(colorPairs);
+
+
+        gradientDivs.forEach((div, index) => {
+            if (colorPairs[index]) {
+                div.style.setProperty('--start-color', colorPairs[index][0]);
+                div.style.setProperty('--end-color', colorPairs[index][1]);
+            }
+        });
+
+        function updatePosition() {
+            const translateY = `translateY(-${scrollPos * 100}vh)`;
+            container.style.transform = translateY;
+
+            divs.forEach((div, index) => {
+                if (index === scrollPos) {
+                    div.classList.add('active');
+                } else {
+                    div.classList.remove('active');
+                }
+            });
+        }
+
+        let startY;
+
+        window.addEventListener('touchstart', (e) => {
+            startY = e.touches[0].clientY;
+        });
+
+        window.addEventListener('touchend', (e) => {
+            const endY = e.changedTouches[0].clientY;
+            const deltaY = startY - endY;
+
+            // Add a threshold (e.g., 30 pixels) to determine a valid swipe
+            if (Math.abs(deltaY) < 30) return; // If swipe distance is less than threshold, do nothing
+
+            if (deltaY > 50 && scrollPos < divs.length - 1) {
+                scrollPos++;
+            } else if (deltaY < -50 && scrollPos > 0) {
+                scrollPos--;
+            }
+
+            updatePosition();
+        });
+        document.addEventListener('DOMContentLoaded', () => {
+            updatePosition();
+        });
+
+    </script>
+</body>
+
+</html>
