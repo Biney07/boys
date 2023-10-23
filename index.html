@@ -107,16 +107,7 @@
             background-position: center;
         }
 
-        .div4 {
-            position: relative;
-            /* Add this */
-            background-image: url('denied.png');
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
-            color: black;
-            text-shadow: rgb(248, 248, 248) 1px 0 10px;
-        }
+      
 
 
         .smalltext {
@@ -265,7 +256,7 @@
             </div>
 
             <div class="fullHeightDiv div2">
-                I just wanting to thank u again <br> I am having such an amazing experience in this job and...
+                I just wanting to thank u again. <br> I am having such an amazing experience in this job and...
             </div>
 
             <div class="fullHeightDiv div3">
@@ -292,73 +283,12 @@
         const divs = document.querySelectorAll('.fullHeightDiv');
 
         const gradientDivs = document.querySelectorAll('.fullHeightDiv.gradient-bg');
-        const passwordModal = document.getElementById('passwordModal');
-        const passwordInput = document.getElementById('passwordInput');
-        const passwordCheck = document.getElementById('passwordCheck');
-        const errorMsg = document.getElementById('errorMsg');
-        const correctPassword = "nanabardhit";
+  
 
 
 
 
-        const slider = document.getElementById('slider');
-        const sliderValue = document.getElementById('sliderValue');
-        const confirmButton = document.getElementById('confirmButton');
-        let confirmedValue;
 
-        // Displaying the slider value next to the slider
-        slider.oninput = function () {
-            sliderValue.textContent = this.value;
-        }
-
-        function handleNote() {
-            confirmedValue = slider.value;
-            document.getElementById('rangeshow').style.display = 'flex'
-
-        };
-
-
-
-        function handleChoose() {
-
-            document.getElementById('showchoose').style.display = 'flex'
-
-        };
-
-        function closeModal() {
-            passwordModal.style.opacity = '0';
-            passwordModal.style.pointerEvents = 'none';
-            passwordModal.style.visibility = 'hidden';
-            document.body.classList.remove('no-scroll'); // Add this line
-        }
-
-        function showModal() {
-            passwordModal.style.opacity = '1';
-            passwordModal.style.pointerEvents = 'all';
-            passwordModal.style.visibility = 'visible';
-            document.body.classList.add('no-scroll'); // Add this line
-        }
-
-
-        passwordCheck.addEventListener('click', function () {
-            if (passwordInput.value === correctPassword) {
-                passwordModal.style.visibility = 'hidden';
-                errorMsg.textContent = '';
-
-                const successDivs = document.getElementsByClassName("successDiv");
-                for (let div of successDivs) {
-                    div.style.display = "flex";
-                }
-
-                // Move to show the two newly revealed divs
-                scrollPos += 1;
-                updatePosition();
-
-            } else {
-                errorMsg.textContent = 'Incorrect password. Try again.';
-                passwordInput.value = '';
-            }
-        });
 
 
 
