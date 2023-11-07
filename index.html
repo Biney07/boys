@@ -1,377 +1,80 @@
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To Verona</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>;)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kalam:wght@300&display=swap"
+      rel="stylesheet"
+    />
     <style>
-        body,
-        html {
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            font-family: Arial, sans-serif;
-        }
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        font-family: Arial, sans-serif;
+      }
 
+      body.no-scroll {
+        overflow: hidden;
+        position: fixed;
+        width: 100%;
+      }
 
+      .container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        transition: transform 0.5s;
+      }
 
-        body.no-scroll {
-            overflow: hidden;
-            position: fixed;
-            width: 100%;
-        }
+      .text {
+        font-size: 30px;
+        color: white;
+        text-shadow: rgb(36, 36, 36) 1px 0 10px;
+        padding: 20px;
+        text-align: center;
+      }
 
+      .sText {
+        font-family: "Kalam", cursive;
+        font-size: 23px;
+        color: white;
+        text-shadow: rgb(206, 206, 206, 0.2) 1px 0 10px;
+        padding: 20px;
+        text-align: center;
+      }
 
-        .container {
-            display: flex;
-            flex-direction: column;
-            width: 100%;
-            transition: transform 0.5s;
-        }
-
-        .text {
-            font-size: 30px;
-            color: white;
-            text-shadow: rgb(36, 36, 36) 1px 0 10px;
-            padding: 20px;
-            text-align: center;
-        }
-
-        .sText {
-            font-family: 'Kalam', cursive;
-            font-size: 23px;
-            color: white;
-            text-shadow: rgb(206, 206, 206, 0.2) 1px 0 10px;
-            padding: 20px;
-            text-align: center;
-        }
-
-        .fullHeightDiv {
-            width: 100%;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            font-size: 30px;
-            color: white;
-            text-shadow: rgb(36, 36, 36) 1px 0 10px;
-            font-weight: bold;
-            transition: opacity 0.5s;
-        }
-
-        .fullHeightDiv:not(.active) {
-            pointer-events: none;
-            /* Ensure inactive divs don't interfere with touch events */
-        }
-
-        .black {
-            background: linear-gradient(to bottom, RGB(0, 0, 0), RGB(0, 0, 0, 0.9));
-
-
-        }
-
-        .div1 {
-            background-image: url('https://w0.peakpx.com/wallpaper/250/320/HD-wallpaper-smiles-faces-smile-yellow.jpg');
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
-        }
-
-
-
-        .div2 {
-            background-image: url('https://itsastampede615821596.files.wordpress.com/2021/06/kung-fu-panda-3.jpg');
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
-        }
-        .div3 {
-            background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/ba79159b-4509-43a7-988d-073a103173ed/dcj5xzr-7259a8be-dddc-4510-893f-38592a281809.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2JhNzkxNTliLTQ1MDktNDNhNy05ODhkLTA3M2ExMDMxNzNlZFwvZGNqNXh6ci03MjU5YThiZS1kZGRjLTQ1MTAtODkzZi0zODU5MmEyODE4MDkucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.1huOzRQ4k9jCfwWsf0WklZElTJcWQ98pmtJcdhuoLuw');
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
-        }
-        .div4 {
-            background-image: url('https://i.pinimg.com/originals/e3/69/a9/e369a91d32da30ddc78d8dabe9745e8e.jpg');
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
-        }
-
-      
-
-
-        .smalltext {
-            position: absolute;
-            font-size: 20px;
-            top: 20px;
-        }
-
-        .gradient-bg {
-            background: linear-gradient(to bottom, var(--start-color), var(--end-color));
-        }
-
-        .buton {
-            background-color: rgb(121, 182, 223);
-            text-shadow: rgb(151, 151, 151) 1px 0 10px;
-            color: white;
-            padding: 20px 40px;
-            position: relative;
-            font-size: 20px;
-            margin-top: 100px;
-            bottom: 90px;
-            border-radius: 20px;
-
-        }
-
-        .buttonBlue {
-            background-color: rgb(121, 182, 223);
-            text-shadow: rgb(151, 151, 151) 1px 0 10px;
-            color: white;
-            margin: 20px;
-            padding: 20px 40px;
-
-            font-size: 20px;
-
-            border-radius: 20px;
-        }
-
-        #passwordModal {
-            visibility: hidden;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.7);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            pointer-events: none;
-        }
-
-
-        #passwordModal>div {
-            position: relative;
-            /* Set to relative so the close button can be absolutely positioned within */
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            width: 300px;
-            text-align: center;
-        }
-
-        #passwordInput {
-            width: 100%;
-            padding: 10px;
-            font-size: 20px;
-            margin: 10px 0;
-        }
-
-        #passwordCheck {
-            background-color: rgb(121, 182, 223);
-            text-shadow: rgb(151, 151, 151) 1px 0 10px;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 20px;
-            font-size: 20px;
-        }
-
-        .close-btn {
-            position: absolute;
-            top: 15px;
-            right: 5px;
-            font-size: 24px;
-            cursor: pointer;
-            background: none;
-            border: none;
-            color: #888;
-        }
-
-        .close-btn:hover {
-            color: #555;
-        }
-
-        #slider {
-            width: 80%;
-            margin: 20px 0;
-        }
-
-        #slider::-webkit-slider-thumb {
-            appearance: none;
-            /* Override default look */
-            width: 25px;
-            /* Set a width */
-            height: 25px;
-            /* Set a height */
-            background: white;
-            /* Set a background color */
-            cursor: pointer;
-            /* Cursor on hover */
-        }
-
-        #slider::-moz-range-thumb {
-            width: 25px;
-            height: 25px;
-            background: white;
-            cursor: pointer;
-        }
-
-        #confirmButton {
-            display: block;
-            margin: 20px auto;
-            padding: 10px 20px;
-            background-color: rgb(121, 182, 223);
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 18px;
-        }
-
-        .foto {
-            width: 100px;
-        }
+      .fullHeightDiv {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 30px;
+        color: white;
+        text-shadow: rgb(36, 36, 36) 1px 0 10px;
+        font-weight: bold;
+        transition: opacity 0.5s;
+      }
     </style>
+  </head>
 
-</head>
-
-<body>
-    <div class="main-wrapper">
-
-        <div class="container">
-            <div class="fullHeightDiv div1 active">
-                Hi Verona...
-                <div class="smalltext "> Scroll down to see more</div>
-            </div>
-
-            <div class="fullHeightDiv div2">
-                I just wanting to thank u again. <br> I am having such an amazing experience in this job and...
-            </div>
-
-            <div class="fullHeightDiv div3">
-                ...none of this would have been possible without your help. <br> I deeply appreciate it and can't thank you enough.
-            </div>
-            <div class="fullHeightDiv div4">
-                Wishing you a wonderful day and many more to come!
-            </div>
-        </div>
-        <div id="passwordModal">
-            <div>
-                <button class="close-btn" onclick="closeModal()">&times;</button>
-
-                <h2>Password: nanabardhit</h2>
-                <input type="password" id="passwordInput">
-                <button id="passwordCheck" onclick="passwordCheck()">Submit</button> 
-            </div>
-        </div>
+  <body>
+    <div style="display: flex; justify-content: center; align-items: center">
+      <img src="borat.JPG" alt="" srcset="" style="height: 320px; border-radius: 10px;" / >
     </div>
-    <script>
-        let scrollPos = 0;
-
-        const container = document.querySelector('.container');
-        const divs = document.querySelectorAll('.fullHeightDiv');
-
-        const gradientDivs = document.querySelectorAll('.fullHeightDiv.gradient-bg');
-  
-
-
-
-
-
-
-
-
-
-        const colorPairs = [
-            ['#003366', '#0066CC'],
-            ['#002244', '#0088AA'],
-            ['#001133', '#005577'],
-            ['#000080', '#4682B4'],
-            ['#003399', '#00BFFF'],
-            ['#000055', '#0000AA'],
-            ['#00163A', '#003366'],
-            ['#8B0000', '#FF4500'],
-            ['#B22222', '#FF6347'],
-            ['#DC143C', '#FF7F50'],
-            ['#FF8C00', '#FFA500'],
-            ['#FF4500', '#FFD700'],
-            ['#FF6347', '#FFA07A'],
-            ['#FF6347', '#FFA07A'],
-            ['#FF4500', '#FFD700'],
-            ['#003399', '#00BFFF'],
-            ['#000055', '#0000AA'],
-            ['#00163A', '#003366'],
-            ['#8B0000', '#FF4500'],
-            ['#B22222', '#FF6347'],
-        ];
-
-        function shuffleArray(array) {
-            for (let i = array.length - 1; i > 0; i--) {
-                const j = Math.floor(Math.random() * (i + 1));
-                [array[i], array[j]] = [array[j], array[i]];
-            }
-        }
-
-        shuffleArray(colorPairs);
-
-
-        gradientDivs.forEach((div, index) => {
-            if (colorPairs[index]) {
-                div.style.setProperty('--start-color', colorPairs[index][0]);
-                div.style.setProperty('--end-color', colorPairs[index][1]);
-            }
-        });
-
-        function updatePosition() {
-            const translateY = `translateY(-${scrollPos * 100}vh)`;
-            container.style.transform = translateY;
-
-            divs.forEach((div, index) => {
-                if (index === scrollPos) {
-                    div.classList.add('active');
-                } else {
-                    div.classList.remove('active');
-                }
-            });
-        }
-
-        let startY;
-
-        window.addEventListener('touchstart', (e) => {
-            startY = e.touches[0].clientY;
-        });
-
-        window.addEventListener('touchend', (e) => {
-            const endY = e.changedTouches[0].clientY;
-            const deltaY = startY - endY;
-
-            // Add a threshold (e.g., 30 pixels) to determine a valid swipe
-            if (Math.abs(deltaY) < 30) return; // If swipe distance is less than threshold, do nothing
-
-            if (deltaY > 50 && scrollPos < divs.length - 1) {
-                scrollPos++;
-            } else if (deltaY < -50 && scrollPos > 0) {
-                scrollPos--;
-            }
-
-            updatePosition();
-        });
-        document.addEventListener('DOMContentLoaded', () => {
-            updatePosition();
-        });
-
-    </script>
-</body>
-
+  </body>
 </html>
