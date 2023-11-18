@@ -25,58 +25,42 @@
         font-family: Arial, sans-serif;
       }
 
-      body.no-scroll {
-        overflow: hidden;
-        position: fixed;
-        width: 100%;
-      }
-
-      .container {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        transition: transform 0.5s;
-      }
-
       .text {
         font-size: 20px;
         color: black;
         padding: 20px;
         text-align: center;
       }
-
-      .sText {
-        font-family: "Kalam", cursive;
-        font-size: 23px;
-        color: white;
-        text-shadow: rgb(206, 206, 206, 0.2) 1px 0 10px;
-        padding: 20px;
-        text-align: center;
-      }
-
-      .fullHeightDiv {
-        width: 100%;
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        font-size: 30px;
-        color: white;
-        text-shadow: rgb(36, 36, 36) 1px 0 10px;
-        font-weight: bold;
-        transition: opacity 0.5s;
+      iframe {
+        width: 320px;
+        height: 180px; /* Adjust as needed */
+        border-radius: 10px;
       }
     </style>
   </head>
 
   <body>
     <div
-      style="display: flex; flex-direction: column; justify-content: center; align-items: center"
+      style="
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 400px;
+      "
     >
-      <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRBxeQRpqcbk-D6TQ5M06mN2rhMhFQgan4WaIhLmsuWAD7rv99m" style="height: 320px; border-radius: 10px;" />
-      <div class="text">"NESE FJALA MIRE ISH KANE FOTO " </div>
+      <iframe
+        src="https://www.youtube.com/embed/5tiLf_bCClU?autoplay=1"
+        frameborder="0"
+        allow="autoplay; encrypted-media"
+        allowfullscreen
+      ></iframe>
+
+      <div class="text">
+        "Happy birthday Dijana, U have made my life a wonderful one, u are a white spirit and i hope
+        u will stay like that always. Ti uroj te gjitha te mirat e ksaj bote , qofsh e lumtur e e
+        buzqeshur gjithmone ❤️😍"
+      </div>
     </div>
   </body>
 </html>
