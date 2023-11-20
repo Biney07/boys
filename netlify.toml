@@ -1,0 +1,8 @@
+[build]
+  command = "pip install flask && python -m flask run"
+  publish = "path/to/your/static/files"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
