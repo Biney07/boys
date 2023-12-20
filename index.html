@@ -2,7 +2,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>;)</title>
+    <title>Happy New Year Erzen</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -10,44 +12,64 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Kalam:wght@300&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap"
       rel="stylesheet"
     />
+
     <style>
-      body,
+      .container {
+        background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+        background-size: 400% 400%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        animation: gradient 15s ease infinite;
+
+        position: relative;
+      }
+
+      @keyframes gradient {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
       html {
         margin: 0;
         padding: 0;
         display: flex;
         align-items: center;
         justify-content: center;
-        overflow: hidden;
-        font-family: Arial, sans-serif;
+        overflow-x: hidden;
+        font-family: "Montserrat", sans-serif;
       }
 
-      body.no-scroll {
-        overflow: hidden;
-        position: fixed;
+      body {
+        overflow-x: hidden;
+        margin: 0px;
         width: 100%;
-      }
-
-      .container {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        transition: transform 0.5s;
       }
 
       .text {
-        font-size: 20px;
+        font-size: 15px;
+        font-family: "Montserrat", sans-serif;
         color: black;
-        padding: 20px;
-        text-align: center;
+        padding: 15px;
+        text-align: left;
+        background-color: white;
+        border-radius: 5px;
+        margin: 20px 10px 10px 10px;
       }
 
       .sText {
         font-family: "Kalam", cursive;
-        font-size: 23px;
+        font-size: px;
         color: white;
         text-shadow: rgb(206, 206, 206, 0.2) 1px 0 10px;
         padding: 20px;
@@ -68,18 +90,52 @@
         font-weight: bold;
         transition: opacity 0.5s;
       }
+      .up {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 50px;
+      }
+      .main {
+        display: flex;
+        margin-top: 30px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        margin: 50px 0px;
+      }
     </style>
   </head>
 
   <body>
-    <div
-      style="display: flex; flex-direction: column; justify-content: center; align-items: center"
-    >
-      <img
-        src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRBxeQRpqcbk-D6TQ5M06mN2rhMhFQgan4WaIhLmsuWAD7rv99m"
-        style="height: 320px; border-radius: 10px"
-      />
-      <div class="text">"Urime DiteLindja profesor "</div>
+    <div class="container">
+      <div class="up">
+        <div style="text-align: center">Play this music to enhance the feeling</div>
+        <div style="text-align: center">
+          <audio id="audioPlayer" controls src="new.mp3" style="margin-top: 10px"></audio>
+        </div>
+      </div>
+      <div class="main">
+        <img
+          src="https://cdn.i-scmp.com/sites/default/files/styles/768x768/public/images/2016/08/03/elon-musks-grandparents-were-adventuring-pilots-who-spent-years-looking-for-a-lost-city-in-the-desert.jpg?itok=KMyU3zAi"
+          style="width: 80%; border-radius: 10px"
+        />
+        <div style="color: white; font-size: 30px; margin-top: 10px">Happy New Year 2024</div>
+        <div class="text">
+          Urime viti i ri Erzen Talla, shpresoj qe ky vite qe po e permbyllim ka qene frytdhenes ne
+          jeten tende. Padyshim qe rezultatet e punes tende tregojne perkushtim, stabilitet
+          emocional, konsistenc, maturi e planifim te gjere, dhe kjo eshte shume veshtire e
+          arritshme. Andaj edhe te qmoj per kete, mirpo mbi te gjitha te admiroj se je njeri, njeri
+          i rrespektushem, ndegjues aktiv, pozitive e optimist ndaj cdo situate. Kane mbetur edhe
+          shume pak kohe te perfundoj ky vite, andaj le te gezojme e afrohemi sa me afer njerzve qe
+          na kane gjendur prane dhe na duan per kete qe jemi."What would you dream if you knew you
+          couldn't fail?" - nje quote qe e ndegjova para disa dite me pare. Mendoj qe kjo te
+          pershtatet edhe ty, dua me shume, ende me shume nga ti, sepse besoj shume qe mund te
+          ndryshosh gjithqka. To a healither, wealthier, and enjoyable life from Bini with Love <3
+          Cheers!!
+        </div>
+      </div>
     </div>
   </body>
 </html>
